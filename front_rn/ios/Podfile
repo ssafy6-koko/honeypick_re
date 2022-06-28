@@ -19,6 +19,7 @@ target 'front_rn' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+
   target 'front_rnTests' do
     inherit! :complete
     # Pods for testing
