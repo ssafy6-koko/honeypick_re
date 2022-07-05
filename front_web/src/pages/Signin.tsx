@@ -1,7 +1,7 @@
-import { memo } from "react";
+import { memo } from 'react';
 
 function Signin() {
-  return <></>;
+  return <div />;
 }
 
 export default memo(Signin);

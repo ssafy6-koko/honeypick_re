@@ -4,7 +4,7 @@
 // 공백 입력이 있는 경우, 공백을 모두 제거해서 반환
 export const noSpace = (text: string): string => {
   const covertText = text;
-  return covertText.replace(" ", "");
+  return covertText.replace(' ', '');
 };
 
 /* username 관련 */
@@ -14,7 +14,7 @@ const usernameRegex = /[^a-z|A-Z|0-9|_]/g;
 // 특수문자 입력시 모두 제거해서 반환
 export const usernameValid = (text: string): string => {
   const converted = text;
-  return converted.replace(usernameRegex, "");
+  return converted.replace(usernameRegex, '');
 };
 
 /* nickname 관련 */
@@ -23,13 +23,13 @@ const nicknameRegex = /[^a-z|A-Z|0-9|ㄱ-ㅎ|가-힣]/g;
 
 // 특수문자 입력시 모두 제거해서 반환
 export const nicknameValid = (text: string) => {
-  return text.replace(nicknameRegex, "");
+  return text.replace(nicknameRegex, '');
 };
 
 /* 비밀번호 관련 */
 // 비밀번호와 비밀번호 확인이 일치하지 않는 경우
 export const passwordCompare = (password1: string, password2: string) => {
-  return password1 === password2 ? true : false;
+  return password1 === password2;
 };
 
 /* 휴대전화 번호 관련 */
@@ -37,13 +37,13 @@ export const passwordCompare = (password1: string, password2: string) => {
 export const phoneValid = (text: string): string => {
   const converted = text;
   return converted
-    .replace(/[^0-9]/g, "")
-    .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3")
-    .replace(/(\-{1,2})$/g, "");
+    .replace(/[^0-9]/g, '')
+    .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, '$1-$2-$3')
+    .replace(/(\\-{1,2})$/g, '');
 };
 
 // 휴대전화 번호 인증 코드 숫자만 입력 가능하도록
 export const onlyNumber = (text: string): string => {
   const converted = text;
-  return converted.replace(/\D/g, "");
+  return converted.replace(/\D/g, '');
 };

@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
-import "./App.css";
-import Routes from "./pages/Routes";
+import { ReactNode } from 'react';
+
+import Routes from './pages/Routes';
 
 function App() {
   return (

@@ -1,7 +1,7 @@
-import { memo } from "react";
+import { memo } from 'react';
 
 function Custom404() {
-  return <></>;
+  return <div />;
 }
 
 export default memo(Custom404);

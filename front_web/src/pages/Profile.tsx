@@ -1,7 +1,7 @@
-import { memo } from "react";
+import { memo } from 'react';
 
 function Profile() {
-  return <></>;
+  return <div />;
 }
 
 export default memo(Profile);

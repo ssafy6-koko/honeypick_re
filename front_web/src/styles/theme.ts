@@ -6,7 +6,7 @@ const theme: DefaultTheme = {
     secondary: 'magenta',
     text: {
       main: 'black',
-      secondary: 'gray'
+      secondary: 'gray',
     },
   },
   fonts: {
@@ -15,7 +15,7 @@ const theme: DefaultTheme = {
     large: '1.4rem',
     semibold: 600,
     bold: 900,
-  }
+  },
 };
 
 export { theme };
