@@ -26,3 +26,7 @@ export const MediumText = styled.p`
 export const SmallText = styled.small`
   font-size: ${(props) => props.theme.fonts.size.small};
 `;
+
+export const Img = styled.img`
+  width: 100%;
+`;
