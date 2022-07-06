@@ -13,6 +13,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: front_web
 
     strategy:
       matrix:
@@ -26,6 +29,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd front_web
+        cache-dependency-path: ./front_web/package-lock.json
+    - run: npm install
     - run: npm ci
     - run: npm run lint:all
