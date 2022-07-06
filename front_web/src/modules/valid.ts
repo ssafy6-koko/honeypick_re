@@ -22,13 +22,16 @@ export const usernameValid = (text: string): string => {
 const nicknameRegex = /[^a-z|A-Z|0-9|ㄱ-ㅎ|가-힣]/g;
 
 // 특수문자 입력시 모두 제거해서 반환
-export const nicknameValid = (text: string) => {
+export const nicknameValid = (text: string): string => {
   return text.replace(nicknameRegex, '');
 };
 
 /* 비밀번호 관련 */
 // 비밀번호와 비밀번호 확인이 일치하지 않는 경우
-export const passwordCompare = (password1: string, password2: string) => {
+export const passwordCompare = (
+  password1: string,
+  password2: string,
+): boolean => {
   return password1 === password2;
 };
 

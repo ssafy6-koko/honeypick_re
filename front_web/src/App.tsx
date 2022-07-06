@@ -12,7 +12,7 @@ const Container = styled.div`
   min-height: 100vh;
 `;
 
-function App() {
+function App(): JSX.Element {
   return (
     <Layout>
       <Routes />
