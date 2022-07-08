@@ -10,7 +10,7 @@ import {
   FlexColumn,
   FlexRow,
   Img,
-  Text12,
+  TextMd,
 } from '../styles/global-styles';
 import { textLogoImg } from '../styles/imges';
 
@@ -105,8 +105,8 @@ function Signin(): JSX.Element {
       </Figure>
       <LoginForm />
       <InfoContainer>
-        <Text12 onClick={clickBeginner}>허니픽이 처음이신가요?</Text12>
-        <Text12 onClick={clickSignUp}>회원가입</Text12>
+        <TextMd onClick={clickBeginner}>허니픽이 처음이신가요?</TextMd>
+        <TextMd onClick={clickSignUp}>회원가입</TextMd>
       </InfoContainer>
     </Container>
   );
