@@ -13,20 +13,24 @@ export const FlexColumn = `
 `;
 
 // 텍스트 (text)
-export const Text10 = styled.small`
-  font-size: ${(props) => props.theme.fonts.size.px10};
+export const TextXs = styled.small`
+  font-size: ${(props) => props.theme.fonts.size.xs};
 `;
 
-export const Text12 = styled.p`
-  font-size: ${(props) => props.theme.fonts.size.px12};
+export const TextSm = styled.p`
+  font-size: ${(props) => props.theme.fonts.size.sm};
 `;
 
-export const Text14 = styled.p`
-  font-size: ${(props) => props.theme.fonts.size.px14};
+export const TextMd = styled.p`
+  font-size: ${(props) => props.theme.fonts.size.md};
 `;
 
-export const Text16 = styled.p`
-  font-size: ${(props) => props.theme.fonts.size.px16};
+export const TextLg = styled.p`
+  font-size: ${(props) => props.theme.fonts.size.lg};
+`;
+
+export const TextXl = styled.p`
+  font-size: ${(props) => props.theme.fonts.size.xl};
 `;
 
 // 이미지 (image)
@@ -62,7 +66,7 @@ export const BaseButton = styled.button`
   ${commonButton}
   background-color: ${({ theme }) => theme.colors.main500};
   color: ${({ theme }) => theme.colors.white};
-  font-size: ${({ theme }) => theme.fonts.size.px12};
+  font-size: ${({ theme }) => theme.fonts.size.md};
   font-weight: ${({ theme }) => theme.fonts.weight.semibold};
 
   &:active {
