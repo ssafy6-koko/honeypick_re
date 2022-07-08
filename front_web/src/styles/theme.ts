@@ -19,10 +19,11 @@ const theme: DefaultTheme = {
   },
   fonts: {
     size: {
-      px10: '10px',
-      px12: '12px',
-      px14: '14px',
-      px16: '16px',
+      xs: '8px',
+      sm: '10px',
+      md: '12px',
+      lg: '14px',
+      xl: '16px',
     },
     weight: {
       semibold: 600,

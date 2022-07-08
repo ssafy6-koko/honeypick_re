@@ -20,10 +20,11 @@ declare module 'styled-components' {
     };
     fonts: {
       size: {
-        px10: string;
-        px12: string;
-        px14: string;
-        px16: string;
+        xs: string;
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
       };
       weight: {
         semibold: number;
