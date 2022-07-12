@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { memo, useCallback, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
+import PhoneForm from '../components/signup/PhoneForm';
 import { usernameValid, passwordCompare } from '../modules/valid';
 import {
   BaseButton,
@@ -9,7 +11,7 @@ import {
   FlexColumn,
   // FlexRow,
   Img,
-  Text12,
+  TextMd,
 } from '../styles/global-styles';
 import { textLogoImg } from '../styles/imges';
 
@@ -65,12 +67,9 @@ function SignupForm() {
   );
 
   // 나중에 phoneForm으로 변경
-  const changePhone = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      setPhone(event.target.value);
-    },
-    [],
-  );
+  const changePhone = useCallback((text: string) => {
+    setPhone(text);
+  }, []);
 
   const changeNickname = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -123,19 +122,6 @@ function SignupForm() {
     [passwordConfirm, changePasswordConfirm],
   );
 
-  // 나중에 phoneForm으로 변경
-  const memoPhoneInput = useMemo(
-    () => (
-      <BaseInput
-        type="tel"
-        value={phone}
-        placeholder="휴대전화 번호"
-        onChange={changePhone}
-      />
-    ),
-    [phone, changePhone],
-  );
-
   const memoNicknameInput = useMemo(
     () => (
       <BaseInput
@@ -163,9 +149,9 @@ function SignupForm() {
       {memoPasswordInput}
       {memoPasswordConfirmInput}
       {passwordConfirmError ? (
-        <Text12>비밀번호가 일치하지 않습니다.</Text12>
+        <TextMd>비밀번호가 일치하지 않습니다.</TextMd>
       ) : null}
-      {memoPhoneInput}
+      <PhoneForm setValidPhone={changePhone} />
       {memoNicknameInput}
       {memoSubmitButton}
     </FormContainer>
@@ -185,7 +171,7 @@ function Signup(): JSX.Element {
         <Img src={textLogoImg} />
       </Figure>
       <SignupForm />
-      <Text12 onClick={clickSignIn}>로그인 하러가기</Text12>
+      <TextMd onClick={clickSignIn}>로그인 하러가기</TextMd>
     </Container>
   );
 }
